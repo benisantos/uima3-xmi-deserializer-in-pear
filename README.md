@@ -7,7 +7,7 @@ This is a sample project to reproduce a likely bug with UIMA v3 XMI deserializat
 ## Description
 
 When running an AAE in a PEAR context (uimaj-core 3.3.1), if a CAS Multiplier tries to populate a new CAS while loading it from an XMI file,
-a `NullPointerException` is thrown by he method `maybeMakeBaseVersionForPear` of the class `CASImpl.java` (line 1536).
+a `NullPointerException` is thrown by the method `maybeMakeBaseVersionForPear` of the class `CASImpl.java` (line 1536).
 
 
 ## Steps to reproduce the problem

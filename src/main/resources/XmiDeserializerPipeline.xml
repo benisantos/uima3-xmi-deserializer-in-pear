@@ -30,7 +30,7 @@
     <flowConstraints>
       <fixedFlow>
       
-      	<!-- Indexes a DocumentAnotation covering all the text. -->
+      	<!-- Index a DocumentAnnotation covering all the text. -->
         <node>DocumentAnnotantor</node>
       
       	<!-- Serialize the input CAS to disk. Deserialize back to a new CAS. Returns the new CAS -->
