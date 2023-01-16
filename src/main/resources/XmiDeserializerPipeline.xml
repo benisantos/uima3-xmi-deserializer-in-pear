@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+
+  <delegateAnalysisEngineSpecifiers>
+
+    <delegateAnalysisEngine key="DocumentAnnotantor">
+      <import name="uima3.DocumentAnnotantor"/>
+    </delegateAnalysisEngine>
+
+    <delegateAnalysisEngine key="IdentityDiskMultiplier">
+      <import name="uima3.IdentityDiskMultiplier"/>
+    </delegateAnalysisEngine>
+
+  </delegateAnalysisEngineSpecifiers>
+
+  <analysisEngineMetaData>
+    <name>XMI Save and Load Pipeline</name>
+    <description>AAE to show a bug? in UIMA 3 when saving/loading an XMI in a PEAR context.</description>
+    <version/>
+    <vendor/>
+
+    <configurationParameters searchStrategy="language_fallback">
+    </configurationParameters>
+
+    <configurationParameterSettings>
+    </configurationParameterSettings>
+
+    <flowConstraints>
+      <fixedFlow>
+      
+      	<!-- Indexes a DocumentAnotation covering all the text. -->
+        <node>DocumentAnnotantor</node>
+      
+      	<!-- Serialize the input CAS to disk. Deserialize back to a new CAS. Returns the new CAS -->
+        <node>IdentityDiskMultiplier</node>
+
+      </fixedFlow>
+    </flowConstraints>
+
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <outputSofas>
+        </outputSofas>
+        <languagesSupported>
+          <language>en</language>
+        </languagesSupported>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>true</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+  <sofaMappings>
+  </sofaMappings>
+</analysisEngineDescription>
